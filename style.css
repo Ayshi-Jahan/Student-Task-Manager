@@ -57,13 +57,16 @@ header p {
     margin-bottom: 25px;
 }
 
-/* Task input */
+/* Responsive task input using Flexbox */
 .task-input {
+    display: flex;
+    gap: 10px;
     margin-bottom: 30px;
 }
 
 .task-input input {
-    width: 75%;
+    flex: 1;
+    min-width: 0;
     padding: 13px;
     border: 1px solid #cbd5e1;
     border-radius: 6px;
@@ -71,8 +74,7 @@ header p {
 }
 
 .task-input button {
-    width: 23%;
-    padding: 13px;
+    padding: 13px 22px;
     background-color: #3b82f6;
     color: white;
     border: none;
@@ -88,6 +90,10 @@ header p {
 }
 
 .task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
     padding: 18px;
     margin-bottom: 12px;
     background-color: #f8fafc;
@@ -95,10 +101,15 @@ header p {
     border-radius: 7px;
 }
 
+.task span:first-child {
+    flex: 1;
+    overflow-wrap: anywhere;
+}
+
 .status {
-    float: right;
     font-size: 13px;
     font-weight: bold;
+    white-space: nowrap;
 }
 
 .pending {
@@ -124,4 +135,47 @@ footer {
     color: #64748b;
     margin-top: 25px;
     padding: 15px;
+}
+
+/* Responsive design for mobile devices */
+@media screen and (max-width: 600px) {
+
+    .container {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    header {
+        padding: 22px 15px;
+    }
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    .task-section {
+        padding: 18px;
+    }
+
+    .task-input {
+        flex-direction: column;
+    }
+
+    .task-input input,
+    .task-input button {
+        width: 100%;
+    }
+
+    .task {
+        align-items: flex-start;
+        padding: 14px;
+    }
+
+    .status {
+        font-size: 12px;
+    }
 }
