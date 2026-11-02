@@ -179,3 +179,32 @@ footer {
         font-size: 12px;
     }
 }
+
+
+#errorMessage {
+    color: red;
+    margin-bottom: 15px;
+}
+
+
+.task-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.complete-btn,
+.delete-btn {
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.complete-btn {
+    background-color: #3b82f6;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+}

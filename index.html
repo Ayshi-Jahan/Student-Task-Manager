@@ -27,15 +27,20 @@
                 <div class="task-input">
                     <input
                         type="text"
+                        id="taskInput"
                         placeholder="Enter a new task..."
                         aria-label="Enter a new task"
                     >
-                    <button type="button">Add Task</button>
+                    <button type="button" id="addTaskBtn">
+                        Add Task
+                    </button>
                 </div>
+
+                <p id="errorMessage"></p>
 
                 <h3>My Tasks</h3>
 
-                <div class="task-list">
+                <div class="task-list" id="taskList">
 
                     <div class="task">
                         <span>Complete Software Project III report</span>
@@ -53,7 +58,6 @@
                     </div>
 
                 </div>
-
             </section>
         </main>
 
@@ -62,6 +66,8 @@
         </footer>
 
     </div>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
